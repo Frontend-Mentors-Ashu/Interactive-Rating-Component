@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+
+@theme {
+
+    --color-primary-100: #131519;
+    --color-primary-200: #212932;
+    --color-primary-300: #FD7715;
+    --color-primary-400: #252D3B;
+    --color-primary-500: #3F4750;
+
+    --font-primary: "__Heebo_72b39c", "__Heebo_Fallback_72b39c";
+
+
+}
