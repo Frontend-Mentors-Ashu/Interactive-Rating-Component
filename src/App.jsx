@@ -27,18 +27,18 @@ function App() {
             <div
               key={rating}
               className={`cursor-pointer text-white/50 text-xs flex justify-center items-center w-10 h-10 rounded-full ml-5 mt-5 
-                ${rating < selectedRating ? "bg-primary-400 hover:bg-white/50" : "bg-primary-300" }`}
+                ${selectedRating === null || rating < selectedRating ? "bg-primary-500 hover:bg-white/50" : "bg-primary-300" }`}
               onClick={() => setSelectedRating(rating)}
 
             >{rating}</div>
           ))}
-          
-
         </div>
-        <button 
-             className="bg-primary-300 text-black w-[280px] mt-5 ml-5 py-2 rounded-full font-medium text-sm cursor-pointer disabled:bg-primary-300"
+        <button  
+
+             className={` text-black w-[280px] mt-5 ml-5 py-2 rounded-full font-medium text-sm cursor-pointer disabled:bg-primary-300 ${isSubmitted ? "bg-primary-300" : "bg-white"}`}
              disabled={!selectedRating} 
-             onClick={() => setIsSubmitted(true)}
+             onClick={() => setIsSubmitted(true)
+             }
         >SUBMIT</button>
 </>
   ) : (
